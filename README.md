@@ -1,2 +1,9 @@
-# estimating-graph-descriptors
-Code for the paper "Estimating Descriptors for Large Graphs" (arXiv link: https://arxiv.org/abs/2001.10301)
+# Estimating Descriptors for Large Graphs
+
+This repository includes the code for the paper "Estimating Descriptors for Large Graphs" - accepted for publication at the 24th Pacific-Asia Conference on Knowledge Discovery and Data Mining (arXiv link: https://arxiv.org/abs/2001.10301).
+
+The base code was written by Kijung Shin for their work on Tri-Fly, and retrieved from https://github.com/kijungs/trifly. Please read their help files if you have trouble running the code.
+
+GABE - Estimates a graph descriptor based on the Graphlet Kernel
+MAEVE - Estimate a graph descriptor based on NetSimile
+
