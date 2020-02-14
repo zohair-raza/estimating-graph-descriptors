@@ -10,8 +10,8 @@ MAEVE - Estimate a graph descriptor based on NetSimile
 
 ## Running the code
 
-To run either program, go to the root directory and run the following command:
+To run either program, go to their root directory, run 'make', and run the following command:
 
-mpirun -n [#number of processes] --trials [#trials] --budget [#number of edges to store on each worker] [edge list file] [output directory]
+mpirun -n [#number of processes] ./bin/mpi  --trials [#trials] --budget [#number of edges to store on each worker] [edge list file] [output directory]
 
-The output is a directory with two files: one file has the taken, and the other has the graph embedding.
+The output is a directory with two files: one file has the time taken, and the other has the graph embedding.
