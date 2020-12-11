@@ -135,10 +135,16 @@ void Worker::updateCnt(const Edge &iEdge){
 	countSums[3] = cur_sum_4*count[1];
 	countSums[4] = cur_sum_3*count[2];
 	
+
+
 	// count 4-cliques
 	cur_sum = 0.0;
-	for (std::set<VID>::iterator CIterator = C.begin(); CIterator != C.end(); CIterator++) {
-		VID tri_on_uv = *CIterator;
+	//for (std::set<VID>::iterator CIterator = C.begin(); CIterator != C.end(); CIterator++) {
+	// std::set<VID>::iterator CIterator = C.begin();
+
+	while ( !C.empty() ){
+		VID tri_on_uv = *C.begin();
+
 		std::set<VID> &Ntouv = nodeToNeighbors[tri_on_uv]; // neigborhood of tri_on_uv
 		for (std::set<VID>::iterator NtouvIterator = Ntouv.begin(); NtouvIterator != Ntouv.end(); NtouvIterator++) {
 			VID neighbor_of_touv = *NtouvIterator; 
@@ -146,10 +152,9 @@ void Worker::updateCnt(const Edge &iEdge){
 				cur_sum += 1;
 			}
 		}
-		C.erase(CIterator); // all cliques on u,v, and tri_on_uv counted, so we dont need it anymore
+		C.erase( C.begin() ); // all cliques on u,v, and tri_on_uv counted, so we dont need it anymore
 	}
 	countSums[5] = cur_sum*count[3];
-	
 	
 	// increment counts for incoming edge
 	for (int i = 0;i < 6;i++){
