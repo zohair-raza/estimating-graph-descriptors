@@ -8,6 +8,8 @@ GABE - Estimates a graph descriptor based on the Graphlet Kernel
 
 MAEVE - Estimate a graph descriptor based on NetSimile
 
+SANTA - Estimate a graph descriptor based on NetLSD
+
 ## Running the code
 
 To run either program, go to their root directory, run 'make', and run the following command:
